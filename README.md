@@ -1,5 +1,7 @@
 # nutrition-coach (Claude Skill)
 
+> Built this after my own postpartum recomp journey — a nutrition coach that actually understands training, breastfeeding, and real life. Works as a Claude Skill or a prompt for any LLM.
+
 A personalized nutrition / body-recomposition coaching skill for Claude. Logs food, breaks down macros, tracks running daily totals, and flags safety issues.
 
 ## Install
