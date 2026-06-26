@@ -112,6 +112,10 @@ Use this template:
 
 - Language:
 - Notes:
+
+## Learnings
+
+(This section is updated automatically by the coach during conversations — do not edit manually.)
 ```
 
-Confirm with the user that the file has been created, then return to `skill.md` to begin coaching.
+Confirm with the user that the file has been created, then return to `SKILL.md` to begin coaching.
