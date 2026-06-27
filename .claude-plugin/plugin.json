@@ -1,5 +1,6 @@
 {
   "name": "nutrition-coach",
+  "displayName": "Nutrition Coach",
   "version": "1.0.0",
   "description": "A personalized AI nutrition coach built as a Claude skill. Works for both men and women — with proper sex-based coaching built in, not bolted on. Logs food, tracks macros, learns your patterns, and remembers your data across conversations.",
   "author": {
