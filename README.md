@@ -26,7 +26,7 @@ Friends started noticing. They asked what I was doing. I shared the Claude proje
 A Claude skill for personalized nutrition coaching. It:
 
 - Runs onboarding to build your profile (goals, training, health context, macro targets)
-- Logs every meal to `meals.md` — a running food diary with daily totals
+- Logs every meal to `meals.json` — a running food diary with daily totals
 - Remembers your patterns and preferences across conversations via `user-data.md`
 - Flags safety issues: protein gaps, too-aggressive deficits, calorie floor
 - Understands sex-based differences — men and women respond differently to training, nutrition, and deficits, and this coach accounts for that
@@ -52,7 +52,7 @@ skills/nutrition-coach/
 
 Created on your machine (not in this repo):
 ├── user-data.md    — your profile, targets, and learnings
-└── meals.md        — your food diary
+└── meals.json      — your food diary
 ```
 
 ---
