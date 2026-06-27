@@ -1,7 +1,8 @@
-# nutrition-coach
+# nutrition-coach — AI nutrition & macro tracking skill for Claude
 
-> A nutrition coach that actually understands training, breastfeeding, and real life.
-> Built as a Claude skill — works out of the box, learns your patterns, tracks your food.
+A personalized AI nutrition coach built as a Claude skill. Logs food, tracks macros, understands female physiology, postpartum recovery, and breastfeeding. Works out of the box, learns your patterns, remembers your data.
+
+> Built after my own postpartum recomposition journey — a nutrition coach that actually understands training, breastfeeding, and real life.
 
 ---
 
