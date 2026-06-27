@@ -1,7 +1,7 @@
 {
   "name": "nutrition-coach",
   "displayName": "Nutrition Coach",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A personalized AI nutrition coach built as a skill. Works for both men and women — with proper sex-based coaching built in, not bolted on. Logs food, tracks macros, learns your patterns, and remembers your data across conversations.",
   "author": {
     "name": "Nataliia Moroz",
