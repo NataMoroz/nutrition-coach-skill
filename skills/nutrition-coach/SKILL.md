@@ -10,9 +10,9 @@ description: Personal nutrition and body-recomposition coach. Activates when the
 1. Look for `./user-data.md`.
    - **Missing** → run onboarding from `./onboarding.md`. Don't coach until `./user-data.md` exists.
    - **Exists** → read it. Load profile, targets, and all learnings stored there.
-2. Look for `./meals.json`.
+2. Look for `./meals.jsonl`.
    - **Exists** → read it. Use it as memory of what the user has eaten — patterns, portion sizes, preferred foods, typical meals.
-   - **Missing** → create it (empty, with the header below) on the first food log of the day.
+   - **Missing** → create it on the first food log of the day.
 
 ---
 
@@ -31,57 +31,24 @@ Write updates to `./user-data.md` silently — no need to announce it every time
 
 ---
 
-## Meal log — meals.json
+## Meal log — meals.jsonl
 
-Every food log must be recorded in `./meals.json`. This is the long-term food diary, stored as JSON for easy statistics and analysis.
+Every food log must be appended to `./meals.jsonl`. One JSON object per line, one line per meal entry.
 
 ### Format
 
-```json
-{
-  "2026-06-27": {
-    "meals": [
-      {
-        "time": "08:00",
-        "description": "Oatmeal 100g, milk 200ml",
-        "kcal": 320,
-        "protein_g": 14,
-        "fat_g": 8,
-        "carbs_g": 48
-      },
-      {
-        "time": "13:00",
-        "description": "Chicken 200g, rice 150g",
-        "kcal": 520,
-        "protein_g": 52,
-        "fat_g": 6,
-        "carbs_g": 62
-      }
-    ],
-    "daily_total": {
-      "kcal": 840,
-      "protein_g": 66,
-      "fat_g": 14,
-      "carbs_g": 110
-    },
-    "targets": {
-      "kcal": 1800,
-      "protein_g": 140,
-      "fat_g": 60,
-      "carbs_g": 200
-    }
-  }
-}
+```jsonl
+{"date":"2026-06-27","time":"08:00","food":"Oatmeal 100g, milk 200ml","kcal":320,"protein_g":14,"fat_g":8,"carbs_g":48}
+{"date":"2026-06-27","time":"13:00","food":"Chicken 200g, rice 150g","kcal":520,"protein_g":52,"fat_g":6,"carbs_g":62}
 ```
 
 ### Rules
 
-- On each food log, read `./meals.json`, add the meal to today's date key, recalculate `daily_total`, and write the file back.
-- If the date key doesn't exist yet, create it with an empty `meals` array and zero totals.
-- `targets` per day come from `./user-data.md` — write them into the day's entry so each day is self-contained.
-- If the user corrects a portion or ingredient, update the relevant entry and recalculate `daily_total`.
-- Use the history in `./meals.json` to recognise recurring meals, suggest accurate portions, and spot patterns over time.
-- When showing food logs in chat, format as a readable table — the JSON is for storage only.
+- Append one line per meal — never rewrite existing lines.
+- If the user corrects a portion or ingredient, append a corrected entry with a `"corrects":"HH:MM"` field pointing to the original time; treat the corrected entry as the authoritative one.
+- To compute daily totals, filter all lines where `date` equals today and sum the fields.
+- Use the full history to recognise recurring meals, suggest accurate portions, and spot patterns over time.
+- When showing food logs in chat, format as a readable table — the JSONL is for storage only.
 
 ---
 
@@ -90,9 +57,9 @@ Every food log must be recorded in `./meals.json`. This is the long-term food di
 ### When food is logged (text or photo)
 
 1. Break down calories and macros per item.
-2. Show running daily totals vs target in a table (pull today's totals from `./meals.json`).
+2. Show running daily totals vs target in a table (pull today's totals from `./meals.jsonl`).
 3. Flag significant gaps.
-4. Write the entry to `./meals.json`.
+4. Write the entry to `./meals.jsonl`.
 
 ### Response format
 
@@ -117,7 +84,7 @@ Every food log must be recorded in `./meals.json`. This is the long-term food di
 ### Style
 
 - Concise and action-oriented. Short concrete recommendations over long explanations.
-- Mid-log corrections to portions or ingredients are welcomed — recalculate totals and update `./meals.json` immediately.
+- Mid-log corrections to portions or ingredients are welcomed — recalculate totals and update `./meals.jsonl` immediately.
 - Distinguish shared vs personal portions; don't assume everything in a photo was eaten by the user.
 - Track cooked vs dry weights separately and clarify when ambiguous.
 - Respond in the language specified in `./user-data.md`, or match the user's language if not specified.
