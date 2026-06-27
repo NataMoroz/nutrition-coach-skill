@@ -85,17 +85,12 @@ You can also invoke the skill directly:
 /nutrition-coach
 ```
 
-## Files
+## Memory
+
+The skill keeps memory in one global folder on your machine: `~/.nutrition-coach/`. It is separate from the skill and shared across all your conversations and across agents. The skill developer doesn't have access to it.
 
 ```
-.claude-plugin/
-├── marketplace.json       — lists this marketplace's plugins
-└── plugin.json            — plugin manifest (plugin root = repo root)
-skills/nutrition-coach/
-├── SKILL.md               — the coach: routing logic, coaching instructions, memory rules
-└── onboarding.md          — first-run flow: collects your profile and creates user-data.md
-
-Created on your machine in ~/.nutrition-coach/ (one global folder, not in this repo):
+~/.nutrition-coach/
 ├── user-data.md           — your profile, targets, and learnings
 └── meals.jsonl            — your food diary, structured for analysis (trends, averages, patterns)
 ```
