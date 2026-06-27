@@ -36,20 +36,30 @@ It's not a generic macro calculator. It's a coach that learns you.
 
 Pick whichever fits your setup:
 
-**Option 1: Claude Code plugin**
+**Option 1: Claude Code**
+
+1. Open Claude Code in the terminal
+2. Add marketplace:
 
 ```
 /plugin marketplace add NataMoroz/nutrition-coach
+```
+
+3. Install the plugin:
+
+```
 /plugin install nutrition-coach@nutrition-coach
 ```
 
-**Option 2: Claude (Desktop Chat / web)**
+4. Select `Install for you (user scope)`
+
+**Option 2: Claude Chat / Claude Cowork**
 
 Customize → Personal plugins → **+** → Create plugin → Add Marketplace → Add from a repository → enter `NataMoroz/nutrition-coach` → **Sync** → Nutrition Coach → Install
 
-**Option 3: CLI Install**
+**Option 3: Other coding agents**
 
-Install into any agent. You will be able to choose your agent during setup.
+Run the following command in the terminal to install into any other coding agent. You will be able to choose your agent during setup.
 
 ```
 npx skills add NataMoroz/nutrition-coach
