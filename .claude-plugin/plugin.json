@@ -6,7 +6,5 @@
     "name": "Nataliia Moroz",
     "url": "https://github.com/NataMoroz"
   },
-  "components": {
-    "skills": ["skills/"]
-  }
+  "skills": "./skills"
 }
