@@ -84,6 +84,8 @@ You can also invoke the skill directly:
 /nutrition-coach
 ```
 
+You don't need to weigh anything or spell out exact grams — the coach estimates portions from your profile and usual habits, which is typically very close to the real numbers.
+
 ## Memory
 
 The skill keeps memory in one global folder on your machine: `~/.nutrition-coach/`. It is separate from the skill and shared across all your conversations and across agents. The skill developer doesn't have access to it.
