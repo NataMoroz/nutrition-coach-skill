@@ -29,7 +29,8 @@ A Claude skill for personalized nutrition coaching. It:
 - Logs every meal to `meals.md` — a running food diary with daily totals
 - Remembers your patterns and preferences across conversations via `user-data.md`
 - Flags safety issues: protein gaps, too-aggressive deficits, calorie floor
-- Understands female physiology — cycle phases, postpartum, breastfeeding
+- Understands sex-based differences — not just "shrink it and pink it": men and women respond differently to training, nutrition, and deficits, and this coach accounts for that
+- Goes deep on female physiology — cycle phases, postpartum, breastfeeding
 - Works in any language
 
 It's not a generic macro calculator. It's a coach that learns you.
