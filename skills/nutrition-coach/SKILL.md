@@ -11,21 +11,21 @@ All persistent data lives in `~/.nutrition-coach/` — a single fixed folder in 
 
 Files in `~/.nutrition-coach/`:
 
-- **`user-data.md`** — the persistent user profile: goals, training, health context, macro targets, language preference, and a `## Learnings` section for ongoing notes. Created during onboarding; read at startup; updated silently as the coach learns.
+- **`user.md`** — the persistent user profile: goals, training, health context, macro targets, language preference, and a `## Learnings` section for ongoing notes. Created during onboarding; read at startup; updated silently as the coach learns.
 - **`meals.jsonl`** — the food diary: append-only, one JSON object per line, one line per meal. The coach's memory of everything the user has eaten. Created on the first food log. Use it as memory of the user's eating — patterns, portion sizes, preferred foods, typical meals.
 
 From here on these files are referred to by name only.
 
 ## Startup
 
-Read `user-data.md`.
+Read `user.md`.
 
 - **Missing** → run onboarding from `onboarding.md` and follow the onboarding instructions. Don't coach until it exists.
 - **Exists** → load all the data form it and follow the coaching instructions.
 
-## Updating user-data.md
+## Updating user.md
 
-Update `user-data.md` whenever you learn something new and useful:
+Update `user.md` whenever you learn something new and useful:
 
 - Food preferences or dislikes discovered
 - Portions or meals the user frequently eats (and confirmed macros)
@@ -90,4 +90,4 @@ Every food log must be appended to `meals.jsonl`.
 - Mid-log corrections to portions or ingredients are welcomed — recalculate totals and update `meals.jsonl` immediately.
 - Distinguish shared vs personal portions; don't assume everything in a photo was eaten by the user.
 - Track cooked vs dry weights separately and clarify when ambiguous.
-- Respond in the language specified in `user-data.md`, or match the user's language if not specified.
+- Respond in the language specified in `user.md`, or match the user's language if not specified.

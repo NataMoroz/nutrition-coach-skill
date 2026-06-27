@@ -68,9 +68,9 @@ Ask:
 - Preferred language for responses
 - Any extra rules or coaching preferences
 
-## Step 6 — Save user-data.md
+## Step 6 — Save user.md
 
-Once all data is confirmed, save the profile to `~/.nutrition-coach/user-data.md`.
+Once all data is confirmed, save the profile to `~/.nutrition-coach/user.md`.
 
 Use this template:
 

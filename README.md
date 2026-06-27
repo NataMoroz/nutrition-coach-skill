@@ -24,7 +24,7 @@ A Claude skill for personalized nutrition coaching. It:
 
 - Runs onboarding to build your profile (goals, training, health context, macro targets)
 - Logs every meal to `meals.jsonl` — a running food diary with daily totals
-- Remembers your patterns and preferences across conversations via `user-data.md`
+- Remembers your patterns and preferences across conversations via `user.md`
 - Flags safety issues: protein gaps, too-aggressive deficits, calorie floor
 - Understands sex-based differences — men and women respond differently to training, nutrition, and deficits, and this coach accounts for that
 - Goes deep on female physiology — not just "shrink it and pink it": cycle phases, postpartum, breastfeeding
@@ -91,8 +91,8 @@ The skill keeps memory in one global folder on your machine: `~/.nutrition-coach
 
 ```
 ~/.nutrition-coach/
-├── user-data.md           — your profile, targets, and learnings
-└── meals.jsonl            — your food diary, structured for analysis (trends, averages, patterns)
+├── user.md         — your profile, targets, and learnings
+└── meals.jsonl     — your food diary, structured for analysis (trends, averages, patterns)
 ```
 
 ## License
