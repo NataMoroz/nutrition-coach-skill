@@ -1,6 +1,6 @@
 # Nutrition Coach — AI nutrition & macro tracking skill
 
-A personalized AI nutrition coach built as a skill. Works for both men and women — with proper sex-based coaching built in, not bolted on. Logs food, tracks macros, learns your patterns, and remembers your data across conversations.
+A personalized AI nutrition coach built as a Claude skill. Logs food, tracks macros, works for men and women with proper sex-based coaching built in. Understands female physiology, postpartum recovery, and breastfeeding. Works out of the box, learns your patterns, remembers your data.
 
 > Built after my own postpartum recomposition journey — a nutrition coach that actually understands training, breastfeeding, and real life.
 
